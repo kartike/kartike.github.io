@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+	<head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet" type="text/css">
         <meta name="theme-color" content="#1A237E">
-        <title>ITT Project
-    </title>
-        
+        <title>ITT Project</title>
         <style> 
             h1 {
                 font-family: 'Tangerine', serif;
@@ -18,17 +18,18 @@
             }
         </style>
         <h1><center>Registration</center></h1>
-  </head>
-  <body>
-        <br><br>
+	</head>
+	<body><br><br>
         <div class="container">
             <form>
                 <div class="form-group">
                     <label for="name">Name:</label>
                     <input type = "text" class="form-control" id="name" placeholder="Enter name">
                 </div>
+                
                 <div class="form-group">
                     <label for="initials">Initials:</label>
+                    <a href="#" data-toggle="tooltip" data-placement="top" title="Eg.- AKC"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span></a>
                     <input type = "text" class="form-control" id="initial" placeholder="Enter initials">
                 </div>
                 
@@ -41,15 +42,22 @@
                     <label for="pwd">Password:</label>
                     <input type="password" class="form-control" id="pwd" placeholder="Enter password">
                 </div>
+                
                 <div class="form-group">
                     <label for="cnf_pwd">Confirm Password:</label>
                     <input type="password" class="form-control" id="cnf_pwd" placeholder="Enter password">
                 </div>
+                
                 <div class="btn-group btn-group-justified">
                         <a href="index.html" class="btn btn-success" role="button">Submit</a>
                         <a href="index.html" class="btn btn-danger" role="button">Reset</a>
                 </div>
             </form>
         </div>
-  </body>
+        <script>
+            $(document).ready(function(){
+                $('[data-toggle="tooltip"]').tooltip(); 
+            });
+        </script>
+	</body>
 </html>
